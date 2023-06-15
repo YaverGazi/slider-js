@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+
+.panel{
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+ flex: 0.7;
+ position: relative;
+ border-radius: 50px;
+ margin: 10px;
+ transition:  flex 0.7s ease-in
+
+}
+.panel h4{
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    color: #fff;
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+.panel.active{
+    flex:5;
+}
+.panel.active h4{
+    opacity:1 ;
+}
+@media screen and (max-width:600px) {
+    .panel:nth-child(4),
+    .panel:nth-child(5){
+        display: none;
+    }
+}
